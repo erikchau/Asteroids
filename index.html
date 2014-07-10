@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script type='application/javascript' src='./moving_object.js'></script>
+    <script type='application/javascript' src='./asteroid.js'></script>
+    <script type='application/javascript' src='./game.js'></script>
+    <script type='application/javascript' src='./ship.js'></script>
+  </head>
+  <body>
+    <canvas id='myCanvas' width='500' height='500'>
+    
+    <script>
+      var canvas = document.getElementsByTagName('canvas')[0];
+      var game = new Asteroids.Game(canvas, 10);
+      game.start();
+    </script>
+    
+    
+  </body>
+</html>

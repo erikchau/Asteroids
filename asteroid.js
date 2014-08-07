@@ -6,16 +6,22 @@
       Asteroid.COLOR);
   };
   
-  Asteroid.COLOR = 'black';
+  Asteroid.COLOR = 'grey';
   
   Asteroid.RADIUS = 50;
   
   Asteroid.inherits(Asteroids.MovingObject);
   
-  Asteroid.randomAsteroid = function(dimX, dimY) {
-    return new Asteroid (
+  Asteroid.randomAsteroid = function(dimX, dimY, ship) {
+    var asteroid = new Asteroid (
       [dimX * Math.random(), dimY * Math.random()],
       randomInitialVec());
+    while (asteroid.isCollidedWith(ship)) {
+      var asteroid = new Asteroid (
+        [dimX * Math.random(), dimY * Math.random()],
+        randomInitialVec());
+    } 
+    return asteroid;
   };
   
   var randomInitialVec = function() {

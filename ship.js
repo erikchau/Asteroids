@@ -49,8 +49,12 @@ Ship.prototype.draw = function(ctx) {
   ctx.moveTo(this.pos[0], this.pos[1]);
   ctx.lineTo(this.pos[0] + (this.direction[0] * 10), this.pos[1] + (this.direction[1] * 10));
   ctx.stroke();
-  
 };
+
+Ship.prototype.fireBullet = function(game){
+  var bullet = new Asteroids.Bullet(this.pos, 7, this.direction, game);
+  return bullet;
+}
 
 Ship.RADIUS = 10;
 Ship.COLOR = 'blue'

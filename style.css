@@ -1,0 +1,15 @@
+body {
+  background-color: black;
+}
+
+#myCanvas{
+  border: white thin solid;
+  margin: auto;
+  display: block;
+}
+
+h1 {
+  color: grey;
+  display: block;
+  text-align: center;
+}
